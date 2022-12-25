@@ -1,0 +1,25 @@
+.DS_Store
+*.sqlite3
+media/
+*.pyc
+*.db
+*.pid
+
+# Ignore Django Migrations in Development if you are working on team
+
+# Only for Development only
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+
+# mkdocs documentation
+/site
+
+# virtualenv
+.venv
+venv/
+ENV/
+.vscode
+
+# dotenv
+.env
