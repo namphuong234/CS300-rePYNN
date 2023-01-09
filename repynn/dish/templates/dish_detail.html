@@ -1,0 +1,28 @@
+{% extends "base.html" %} 
+
+{% load static %} 
+
+{% block title %} 
+{{ dish.name }}
+{% endblock %} 
+
+{% block content %}
+
+<div>
+  <img src="
+  {% if dish.image %}
+  {{ dish.image.url }}
+  {% else %} 
+  {% static "img/no_image.png" %}
+  {% endif %}">
+  <h1>{{ dish.name }}</h1>
+  <h2>
+
+      {{ dish.category }}
+
+  </h2>
+  <p class="price">${{ dish.price }}</p>
+  {{ dish.description|linebreaks }}
+</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+ {% if category %}{{ category.name }}{% else %}dishs{% endif %}
+{% endblock %}
+
+
+{% block content %}
+ <div id="sidebar">
+ <h3>Categories</h3>
+ <ul>
+ <li {% if not category %}class="selected"{% endif %}>
+ <a href="">All</a>
+ </li>
+ {% for c in categories %}
+ <a href="">{{ c.name }}</a>
+
+{% endfor %}
+
+ {% for d in dishes %}
+ <div class="item">
+ <a href="{% url 'dishes:dish' d.id %}">
+ <img src="{% if d.image %}{{ d.image.url }}{% else %}{% 
+static "img/no_image.png" %}{% endif %}">
+ </a>
+ <a href="{% url 'dishes:dish' d.id %}">{{ d.name }}</a>
+ <br>
+ ${{ d.price }}
+ </div>
+
+ {% endfor %}
+
+ </div>
+{% endblock %}

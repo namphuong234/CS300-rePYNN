@@ -39,10 +39,11 @@ python3 manage.py runserver
 ## Dev
 
 1. Fork it (https://github.com/Nhu-Huynh/CS300-rePYNN.git)
+
 2. Move to dev branch
 ```sh
 git checkout origin/dev
 ```
-2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Create your feature branch (`git checkout -b feature/fooBar`)
 
 
