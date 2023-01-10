@@ -1,8 +1,13 @@
 
 
 *migrations
+*/migrations
 *.pyc
 
 .env
 /env
 .vscode/
+repynn/customer/migrations/__init__.py
+
+products*
+
