@@ -3,6 +3,8 @@
 *migrations
 *.pyc
 
-.env
-/env
+.virenv
+/virenv
 .vscode/
+
+.gitignore
