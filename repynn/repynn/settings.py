@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dish',
-    'payment',
+    'payment.apps.PaymentConfig',
     'orders.apps.OrdersConfig',
     'cart.apps.CartConfig',
 ]
@@ -279,3 +279,12 @@ JAZZMIN_SETTINGS = {
 ###########################################
 
 CART_SESSION_ID = 'cart'
+
+
+
+###########################################
+
+# Stripe settings
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51MOeUZEeT5fc3Lje6PIdrccsBRZzzEabuSmt96r1iVKXgDoU2i038wTebv6ujh0JFOj8DWsrBdepIl3rSa362od20096J3MNvn' # Publishable key 
+STRIPE_SECRET_KEY = 'sk_test_51MOeUZEeT5fc3LjeeuWM7E52Hvyp7VTIBa0mJZxHD3dh5aMEaCKY5HdH6c7qPNksMRWPJ1BNhMX4SpTL1k5g7ybK00JOHodqqb' # Secret key 
+STRIPE_API_VERSION = '2022-08-01'
