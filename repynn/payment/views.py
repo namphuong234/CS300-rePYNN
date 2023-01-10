@@ -13,8 +13,8 @@ stripe.api_version = settings.STRIPE_API_VERSION
 
 def payment_process(request):
     # get current order
-    order_id = request.session.get('order_id', None)
-    order = get_object_or_404(Order, id=order_id)
+    customer = request.session.get('customer', None)
+    order = get_object_or_404(Order, id=customer)
 
     if request.method == 'POST':  # --> create a Stripe checkout session
         success_url = request.build_absolute_uri(reverse('payment:completed'))
