@@ -48,11 +48,11 @@ def payment_process(request):
         # redirect to Stripe payment form
         return redirect(session.url, code=303)
     else:  # GET request: the order summary and a button to proceed with the payment --> generate a POST request to the view.
-        return render(request, 'payment/process.html', locals())
+        return render(request, 'process.html', locals())
 
-def payment_complete(request):
-    return render(request, 'payment/completed.html')
+def payment_completed(request):
+    return render(request, 'completed.html')
 
-def payment_cancel(request):
-    return render(request, 'payment/canceled.html')
+def payment_canceled(request):
+    return render(request, 'canceled.html')
     
