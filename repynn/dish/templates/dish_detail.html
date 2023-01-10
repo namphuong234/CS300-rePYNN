@@ -22,6 +22,11 @@
 
   </h2>
   <p class="price">${{ dish.price }}</p>
+  <form action="{% url "cart:cart_add" dish.id %}" method="post">
+    {{ cart_dish_form }}
+    {% csrf_token %}
+    <input type="submit" value="Add to cart">
+   </form>
   {{ dish.description|linebreaks }}
 </div>
 

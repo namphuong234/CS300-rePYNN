@@ -35,3 +35,6 @@ class Dish(models.Model):
 
     def get_absolute_url(self):
         return reverse('dish', args=[str(self.id)])
+    
+
+

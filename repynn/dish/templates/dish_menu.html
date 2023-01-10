@@ -19,11 +19,11 @@
 
  {% for d in dishes %}
  <div class="item">
- <a href="{% url 'dishes:dish' d.id %}">
+ <a href="{% url 'dishes:dish_detail' d.id %}">
  <img src="{% if d.image %}{{ d.image.url }}{% else %}{% 
 static "img/no_image.png" %}{% endif %}">
  </a>
- <a href="{% url 'dishes:dish' d.id %}">{{ d.name }}</a>
+ <a href="{% url 'dishes:dish_detail' d.id %}">{{ d.name }}</a>
  <br>
  ${{ d.price }}
  </div>
