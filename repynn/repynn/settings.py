@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dish',
     'payment.apps.PaymentConfig',
-    'orders.apps.OrdersConfig',
+    'order.apps.OrderConfig',
     'cart.apps.CartConfig',
 ]
 
